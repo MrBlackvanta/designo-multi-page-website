@@ -2,7 +2,7 @@ import { companyValues } from "@/data";
 
 export default function CompanyValues() {
   return (
-    <section className="v-container relative isolate">
+    <section className="v-container relative">
       <div className="bg-light-grey/50 pointer-events-none absolute top-31 right-0 -z-10 hidden h-148.5 w-251.5 rotate-180 rounded-full rounded-bl-none lg:block" />
 
       <ul className="grid gap-y-20 md:gap-y-8 lg:grid-cols-3 lg:gap-x-7.5 lg:gap-y-0">

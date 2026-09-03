@@ -12,14 +12,24 @@ export type Office = {
   illustration: StaticImageData;
 };
 
+export type ServiceSlug = "web-design" | "app-design" | "graphic-design";
+
 export type Service = {
-  slug: string;
+  slug: ServiceSlug;
   name: string;
+  intro: string;
+  description: string;
   images: {
     mobile: StaticImageData;
     tablet: StaticImageData;
     desktop: StaticImageData;
   };
+};
+
+export type Project = {
+  name: string;
+  description: string;
+  image: StaticImageData;
 };
 
 export type CompanyValue = {

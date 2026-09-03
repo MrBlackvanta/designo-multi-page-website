@@ -2,4 +2,7 @@ export { default as CallToAction } from "./call-to-action";
 export { default as CompanyValues } from "./company-values";
 export { default as HomeHero } from "./home-hero";
 export { default as LocationLinks } from "./location-links";
+export { default as OtherServices } from "./other-services";
+export { default as ProjectGrid } from "./project-grid";
 export { default as ServiceCards } from "./service-cards";
+export { default as ServiceIntro } from "./service-intro";

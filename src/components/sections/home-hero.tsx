@@ -3,7 +3,7 @@ import { Button } from "@/components/ui";
 
 export default function HomeHero() {
   return (
-    <section className="md:v-container relative isolate">
+    <section className="md:v-container relative">
       <div className="bg-light-grey/50 pointer-events-none absolute top-80 left-0 -z-10 hidden h-148.5 w-251.5 rounded-full rounded-bl-none lg:block" />
 
       <div className="bg-peach md:rounded-card relative isolate min-h-210.75 overflow-clip px-6 pt-20 text-center text-black md:px-14.5 md:pt-15 lg:flex lg:min-h-160 lg:items-center lg:px-23.75 lg:pt-0 lg:text-left">
