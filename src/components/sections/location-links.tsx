@@ -24,7 +24,7 @@ export default function LocationLinks() {
               {country}
             </h3>
 
-            <Button href={`/locations#${slug}`} className="mt-8 uppercase">
+            <Button href={`/locations#${slug}`} className="mt-8">
               See location
               <span className="sr-only"> in {country}</span>
             </Button>

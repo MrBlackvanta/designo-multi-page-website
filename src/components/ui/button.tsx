@@ -26,7 +26,7 @@ export default function Button({
     <Link
       href={href}
       className={cn(
-        "v-focus text-button text-dark-grey rounded-button hover:bg-peach-light flex h-14 w-38 items-center justify-center font-medium motion-safe:transition-colors",
+        "v-focus text-button text-dark-grey rounded-button hover:bg-peach-light flex h-14 w-38 items-center justify-center font-medium uppercase motion-safe:transition-colors",
         grounds[ground],
         className,
       )}

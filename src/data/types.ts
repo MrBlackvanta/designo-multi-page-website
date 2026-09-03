@@ -12,6 +12,22 @@ export type Office = {
   illustration: StaticImageData;
 };
 
+export type Service = {
+  slug: string;
+  name: string;
+  images: {
+    mobile: StaticImageData;
+    tablet: StaticImageData;
+    desktop: StaticImageData;
+  };
+};
+
+export type CompanyValue = {
+  name: string;
+  illustration: StaticImageData;
+  description: string;
+};
+
 export type SocialLink = {
   label: string;
   href: string;

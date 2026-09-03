@@ -10,6 +10,7 @@
   --color-dark-grey: #333136;
   --color-light-grey: #f1f3f5;
   --color-scrim: rgb(0 0 0 / 0.5);
+  --color-wash: #5d0202;
 
   --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-league-spartan), var(--font-jost), sans-serif;
