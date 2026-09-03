@@ -5,7 +5,7 @@ import NavLinks from "./nav-links";
 
 export default function SiteFooter() {
   return (
-    <footer className="relative bg-black pt-16 pb-16 text-white md:pt-20 md:pb-20 lg:pt-18 lg:pb-18">
+    <footer className="relative bg-black pt-16 pb-16 text-white group-has-data-cta:pt-63.25 md:pt-20 md:pb-20 md:group-has-data-cta:pt-41.5 lg:pt-18 lg:pb-18 lg:group-has-data-cta:pt-36">
       <div className="v-container">
         <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-between">
           <Logo className="v-focus-on-dark" />

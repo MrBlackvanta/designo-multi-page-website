@@ -1,3 +1,4 @@
+import { LocationLinks } from "@/components/sections";
 import { siteName } from "@/data";
 import { pageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
@@ -14,5 +15,10 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function ContactPage() {
-  return <h1>Contact Us</h1>;
+  return (
+    <div className="space-y-30 lg:space-y-40">
+      <h1>Contact Us</h1>
+      <LocationLinks />
+    </div>
+  );
 }

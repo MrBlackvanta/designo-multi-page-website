@@ -57,7 +57,7 @@ export default function RootLayout({
       lang="en"
       className={`${jost.variable} ${jostItalic.variable} ${leagueSpartan.variable} antialiased`}
     >
-      <body className="flex min-h-dvh flex-col">
+      <body className="group flex min-h-dvh flex-col">
         <SiteHeader />
         <main className="grow">{children}</main>
         <SiteFooter />
