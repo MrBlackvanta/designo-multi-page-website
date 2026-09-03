@@ -1,3 +1,5 @@
+export { default as AboutHero } from "./about-hero";
+export { default as AboutStory } from "./about-story";
 export { default as CallToAction } from "./call-to-action";
 export { default as CompanyValues } from "./company-values";
 export { default as HomeHero } from "./home-hero";

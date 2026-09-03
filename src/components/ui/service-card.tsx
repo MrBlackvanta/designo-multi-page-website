@@ -38,6 +38,8 @@ export default function ServiceCard({
           />
         </picture>
 
+        <span className="bg-peach-deep/80 pointer-events-none absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 motion-safe:transition-opacity motion-safe:duration-300" />
+
         <h3 className="text-title-sm md:text-title font-medium uppercase">
           {name}
         </h3>

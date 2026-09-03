@@ -1,5 +1,10 @@
-import { CallToAction, LocationLinks } from "@/components/sections";
-import { siteName } from "@/data";
+import {
+  AboutHero,
+  AboutStory,
+  CallToAction,
+  LocationLinks,
+} from "@/components/sections";
+import { siteName, stories } from "@/data";
 import { pageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 
@@ -15,10 +20,17 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function AboutPage() {
+  const [talent, realDeal] = stories;
+
   return (
     <div className="space-y-30 lg:space-y-40">
-      <h1>About Us</h1>
+      <div className="md:space-y-30 lg:space-y-40">
+        <AboutHero />
+        <AboutStory story={talent} />
+      </div>
+
       <LocationLinks />
+      <AboutStory story={realDeal} />
       <CallToAction />
     </div>
   );

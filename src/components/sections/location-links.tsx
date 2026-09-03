@@ -3,10 +3,15 @@ import { offices } from "@/data";
 
 export default function LocationLinks() {
   return (
-    <section aria-labelledby="offices-heading" className="v-container">
+    <section
+      aria-labelledby="offices-heading"
+      className="v-container relative overflow-x-clip"
+    >
       <h2 id="offices-heading" className="sr-only">
         Our offices
       </h2>
+
+      <div className="bg-light-grey/50 pointer-events-none absolute top-45.5 -right-99 -z-10 hidden h-148.5 w-251.5 rounded-full rounded-bl-none lg:block" />
 
       <ul className="grid justify-items-center gap-y-12 md:gap-y-17.25 lg:grid-cols-3 lg:gap-x-7.5">
         {offices.map(({ slug, country, illustration }) => (

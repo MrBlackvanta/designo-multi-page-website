@@ -12,6 +12,12 @@ export type Office = {
   illustration: StaticImageData;
 };
 
+export type ResponsiveImages = {
+  mobile: StaticImageData;
+  tablet: StaticImageData;
+  desktop: StaticImageData;
+};
+
 export type ServiceSlug = "web-design" | "app-design" | "graphic-design";
 
 export type Service = {
@@ -19,11 +25,16 @@ export type Service = {
   name: string;
   intro: string;
   description: string;
-  images: {
-    mobile: StaticImageData;
-    tablet: StaticImageData;
-    desktop: StaticImageData;
-  };
+  images: ResponsiveImages;
+};
+
+export type StorySlug = "world-class-talent" | "the-real-deal";
+
+export type Story = {
+  slug: StorySlug;
+  name: string;
+  paragraphs: string[];
+  images: ResponsiveImages;
 };
 
 export type Project = {
