@@ -1,0 +1,44 @@
+import { siteName, siteUrl } from "@/data";
+import { pageMetadata } from "@/lib/metadata";
+import type { Metadata, Viewport } from "next";
+import { Jost } from "next/font/google";
+import "./globals.css";
+
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const homeTitle = `${siteName} | Award-winning design and digital branding`;
+const description =
+  "Designo is a creative agency building responsive websites, app experiences and brand identities. Ten years of work for startups, corporations and nonprofits.";
+
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: homeTitle,
+    shareTitle: homeTitle,
+    description,
+    path: "/",
+  }),
+  metadataBase: new URL(siteUrl),
+  title: { default: homeTitle, template: `%s | ${siteName}` },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${jost.variable} antialiased`}>
+      <body className="flex min-h-dvh flex-col">{children}</body>
+    </html>
+  );
+}
