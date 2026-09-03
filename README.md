@@ -7,7 +7,7 @@ A seven-page agency site built for the [Designo multi-page website challenge](ht
 - Next.js
 - React
 - TypeScript
-- Tailwind CSS v4
+- Tailwind CSS
 
 ## Author
 

@@ -1,11 +1,18 @@
 import { siteName, siteUrl } from "@/data";
 import { pageMetadata } from "@/lib/metadata";
 import type { Metadata, Viewport } from "next";
-import { Jost } from "next/font/google";
+import { Jost, League_Spartan } from "next/font/google";
 import "./globals.css";
 
 const jost = Jost({
   variable: "--font-jost",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const leagueSpartan = League_Spartan({
+  variable: "--font-league-spartan",
+  weight: ["700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -37,7 +44,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jost.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${jost.variable} ${leagueSpartan.variable} antialiased`}
+    >
       <body className="flex min-h-dvh flex-col">{children}</body>
     </html>
   );
