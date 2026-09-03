@@ -9,6 +9,7 @@
   --color-black: #1d1c1e;
   --color-dark-grey: #333136;
   --color-light-grey: #f1f3f5;
+  --color-scrim: rgb(0 0 0 / 0.5);
 
   --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-league-spartan), var(--font-jost), sans-serif;
@@ -85,6 +86,71 @@
     body {
       font-size: var(--text-body);
       line-height: var(--text-body--line-height);
+    }
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@utility v-container {
+  padding-inline: max(--spacing(6), (100% - var(--container-content)) / 2);
+
+  @media (width >= 48rem) {
+    padding-inline: max(--spacing(9.75), (100% - var(--container-content)) / 2);
+  }
+}
+
+@utility v-focus {
+  @apply focus-visible:outline-dark-grey focus-visible:outline-2 focus-visible:outline-offset-2;
+}
+
+@utility v-focus-on-dark {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+}
+
+@utility v-tap {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+  }
+}
+
+@utility v-logo-mark {
+  background-image: conic-gradient(
+    in srgb,
+    var(--color-peach),
+    rgb(from var(--color-peach) r g b / 0)
+  );
+}
+
+@utility v-nav-link {
+  @apply v-tap;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0 2px;
+    bottom: calc(--spacing(1.5) * -1);
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease-out;
+  }
+
+  &:hover::before,
+  &:focus-visible::before,
+  &[aria-current="page"]::before {
+    transform: scaleX(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::before {
+      transition-duration: 0s;
     }
   }
 }

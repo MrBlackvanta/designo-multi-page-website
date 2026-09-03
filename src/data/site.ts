@@ -22,6 +22,22 @@ export const routes = [
   "/graphic-design",
 ];
 
+const officePhone = "+1 253-863-8967";
+const officeEmail = "contact@designo.co";
+
+export const office = {
+  name: "Designo Central Office",
+  lines: ["3886 Wellington Street", "Toronto, Ontario M9C 3J5"],
+};
+
+export const contactDetails = {
+  label: "Contact Us (Central Office)",
+  phone: officePhone,
+  phoneHref: `tel:${officePhone.replace(/[^+\d]/g, "")}`,
+  email: officeEmail,
+  emailHref: `mailto:${officeEmail}`,
+};
+
 export const navLinks: NavLink[] = [
   { label: "Our Company", href: "/about" },
   { label: "Locations", href: "/locations" },

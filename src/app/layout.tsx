@@ -1,3 +1,4 @@
+import { SiteFooter, SiteHeader } from "@/components/layout";
 import { siteName, siteUrl } from "@/data";
 import { pageMetadata } from "@/lib/metadata";
 import type { Metadata, Viewport } from "next";
@@ -8,6 +9,14 @@ const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"],
   display: "swap",
+});
+
+const jostItalic = Jost({
+  variable: "--font-jost-italic",
+  style: "italic",
+  subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 const leagueSpartan = League_Spartan({
@@ -46,9 +55,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${leagueSpartan.variable} antialiased`}
+      className={`${jost.variable} ${jostItalic.variable} ${leagueSpartan.variable} antialiased`}
     >
-      <body className="flex min-h-dvh flex-col">{children}</body>
+      <body className="flex min-h-dvh flex-col">
+        <SiteHeader />
+        <main className="grow">{children}</main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }
