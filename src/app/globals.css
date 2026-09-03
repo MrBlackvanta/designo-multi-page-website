@@ -47,10 +47,10 @@
   --text-menu--letter-spacing: 0.083333em;
 
   --text-button: 0.9375rem;
-  --text-button--line-height: 1;
+  --text-button--line-height: 1.375rem;
   --text-button--letter-spacing: 0.066667em;
   --text-link: 0.9375rem;
-  --text-link--line-height: 1;
+  --text-link--line-height: 1.375rem;
   --text-link--letter-spacing: 0.333333em;
 
   --text-field: 0.9375rem;
@@ -59,7 +59,7 @@
   --text-error--line-height: 1.625rem;
 
   --text-logo: 1.5rem;
-  --text-logo--line-height: 1;
+  --text-logo--line-height: 1.6875rem;
   --text-logo--letter-spacing: 0.208333em;
 
   --radius-card: 15px;
