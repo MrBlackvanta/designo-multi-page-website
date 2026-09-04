@@ -1,4 +1,5 @@
-import { siteName } from "@/data";
+import { CallToAction, OfficeLocation } from "@/components/sections";
+import { offices, siteName } from "@/data";
 import { pageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 
@@ -14,5 +15,19 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function LocationsPage() {
-  return <h1>Our Locations</h1>;
+  return (
+    <>
+      <h1 className="sr-only">Our Locations</h1>
+
+      <div className="space-y-30 lg:space-y-40">
+        <div className="space-y-10 md:space-y-30 lg:space-y-8">
+          {offices.map((office) => (
+            <OfficeLocation key={office.slug} office={office} />
+          ))}
+        </div>
+
+        <CallToAction />
+      </div>
+    </>
+  );
 }

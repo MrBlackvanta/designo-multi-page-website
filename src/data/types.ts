@@ -6,10 +6,23 @@ export type NavLink = {
   href: string;
 };
 
+export type OfficeSlug = "canada" | "australia" | "united-kingdom";
+
+export type MapView = {
+  center: [number, number];
+  zoom: number;
+  area: string;
+};
+
 export type Office = {
-  slug: string;
+  slug: OfficeSlug;
   country: string;
   illustration: StaticImageData;
+  name: string;
+  address: string[];
+  phone: string;
+  email: string;
+  map: MapView;
 };
 
 export type ResponsiveImages = {

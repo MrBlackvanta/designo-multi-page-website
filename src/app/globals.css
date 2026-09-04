@@ -121,6 +121,33 @@
   }
 }
 
+@utility v-map {
+  .leaflet-container {
+    background-color: var(--color-peach-pale);
+    font-family: inherit;
+  }
+
+  .leaflet-container:focus-visible {
+    outline: 2px solid var(--color-dark-grey);
+    outline-offset: -2px;
+  }
+
+  .leaflet-container a:focus-visible {
+    outline: 2px solid var(--color-dark-grey);
+    outline-offset: 0;
+  }
+
+  .leaflet-container .leaflet-control-attribution {
+    background-color: var(--color-white);
+    color: var(--color-dark-grey);
+  }
+
+  .leaflet-container .leaflet-control-attribution a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
 @utility v-logo-mark {
   background-image: conic-gradient(
     in srgb,

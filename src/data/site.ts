@@ -5,6 +5,7 @@ import {
   TwitterIcon,
   YouTubeIcon,
 } from "@/components/icons";
+import { telHref } from "@/lib/utils";
 import type { NavLink, SocialLink } from "./types";
 
 export const siteName = "Designo";
@@ -33,7 +34,7 @@ export const office = {
 export const contactDetails = {
   label: "Contact Us (Central Office)",
   phone: officePhone,
-  phoneHref: `tel:${officePhone.replace(/[^+\d]/g, "")}`,
+  phoneHref: telHref(officePhone),
   email: officeEmail,
   emailHref: `mailto:${officeEmail}`,
 };

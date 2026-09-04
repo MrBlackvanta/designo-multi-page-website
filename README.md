@@ -8,6 +8,7 @@ A seven-page agency site built for the [Designo multi-page website challenge](ht
 - React
 - TypeScript
 - Tailwind CSS
+- Leaflet
 
 ## Author
 
