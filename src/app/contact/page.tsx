@@ -1,4 +1,4 @@
-import { LocationLinks } from "@/components/sections";
+import { ContactHero, LocationLinks } from "@/components/sections";
 import { siteName } from "@/data";
 import { pageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
@@ -16,8 +16,8 @@ export const metadata: Metadata = pageMetadata({
 
 export default function ContactPage() {
   return (
-    <div className="space-y-30 lg:space-y-40">
-      <h1>Contact Us</h1>
+    <div className="space-y-30 pb-30 lg:space-y-40 lg:pb-40">
+      <ContactHero />
       <LocationLinks />
     </div>
   );

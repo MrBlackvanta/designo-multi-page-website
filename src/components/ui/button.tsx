@@ -9,29 +9,39 @@ const grounds: Record<ButtonGround, string> = {
   dark: "bg-white",
 };
 
-type ButtonProps = {
-  href: string;
+type SharedProps = {
   ground?: ButtonGround;
   className?: string;
   children: ReactNode;
 };
 
+type ButtonProps = SharedProps &
+  ({ href: string; type?: never } | { href?: never; type: "submit" });
+
 export default function Button({
   href,
+  type,
   ground = "light",
   className,
   children,
 }: ButtonProps) {
+  const shape = cn(
+    "v-focus text-button text-dark-grey rounded-button hover:bg-peach-light flex h-14 w-38 items-center justify-center font-medium uppercase motion-safe:transition-colors",
+    grounds[ground],
+    className,
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className={shape}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      className={cn(
-        "v-focus text-button text-dark-grey rounded-button hover:bg-peach-light flex h-14 w-38 items-center justify-center font-medium uppercase motion-safe:transition-colors",
-        grounds[ground],
-        className,
-      )}
-    >
+    <button type={type} className={shape}>
       {children}
-    </Link>
+    </button>
   );
 }
