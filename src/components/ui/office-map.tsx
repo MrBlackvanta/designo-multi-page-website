@@ -1,12 +1,9 @@
 "use client";
 
+import { mapTiles } from "@/data";
 import type { MapView } from "@/data";
 import type { Map } from "leaflet";
 import { useEffect, useRef } from "react";
-
-const tileUrl = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-const tileAttribution =
-  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
 type OfficeMapProps = {
   view: MapView;
@@ -41,9 +38,10 @@ export default function OfficeMap({ view, className }: OfficeMapProps) {
         fadeAnimation: animate,
       });
       map.attributionControl.setPrefix(false);
-      L.tileLayer(tileUrl, { attribution: tileAttribution, maxZoom: 19 }).addTo(
-        map,
-      );
+      L.tileLayer(mapTiles.url, {
+        attribution: mapTiles.attribution,
+        maxZoom: 19,
+      }).addTo(map);
     };
 
     const observer = new IntersectionObserver(

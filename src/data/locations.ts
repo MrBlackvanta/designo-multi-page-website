@@ -3,6 +3,15 @@ import canada from "@/assets/illustrations/canada.svg";
 import unitedKingdom from "@/assets/illustrations/united-kingdom.svg";
 import type { Office } from "./types";
 
+const tileOrigin = "https://tile.openstreetmap.org";
+
+export const mapTiles = {
+  origin: tileOrigin,
+  url: `${tileOrigin}/{z}/{x}/{y}.png`,
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+};
+
 export const offices: Office[] = [
   {
     slug: "canada",

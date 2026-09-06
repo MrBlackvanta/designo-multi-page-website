@@ -35,6 +35,7 @@ export default function HomeHero() {
             className="mx-auto mt-6 lg:mx-0 lg:mt-10"
           >
             Learn More
+            <span className="sr-only"> about Designo</span>
           </Button>
         </div>
       </div>

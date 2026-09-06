@@ -1,6 +1,11 @@
 # Designo multi-page website
 
-A seven-page agency site built for the [Designo multi-page website challenge](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT).
+My solution to the [Designo multi-page website](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT) challenge on Frontend Mentor.
+
+![](./screenshot.webp)
+
+- Live: https://designo-multi-page-website.abdelrhman-ahmed8881.workers.dev
+- Code: https://github.com/MrBlackvanta/designo-multi-page-website
 
 ## Built with
 
@@ -8,7 +13,7 @@ A seven-page agency site built for the [Designo multi-page website challenge](ht
 - React
 - TypeScript
 - Tailwind CSS
-- Leaflet
+- Leaflet, with OpenStreetMap tiles
 
 ## Author
 

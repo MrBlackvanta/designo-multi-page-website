@@ -1,7 +1,9 @@
 import pattern from "@/assets/patterns/three-circles.svg";
 import { OfficeMap } from "@/components/ui";
+import { mapTiles } from "@/data";
 import type { Office, OfficeSlug } from "@/data";
 import { cn, telHref } from "@/lib/utils";
+import { preconnect } from "react-dom";
 
 const bands: Record<OfficeSlug, string> = {
   canada: "lg:flex-row-reverse",
@@ -16,6 +18,8 @@ type OfficeLocationProps = {
 export default function OfficeLocation({ office }: OfficeLocationProps) {
   const { slug, country, name, address, phone, email, map } = office;
   const headingId = `${slug}-heading`;
+
+  preconnect(mapTiles.origin);
 
   return (
     <section id={slug} aria-labelledby={headingId} className="md:v-container">
