@@ -67,6 +67,8 @@
   --text-logo--line-height: 1.6875rem;
   --text-logo--letter-spacing: 0.172414em;
 
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
   --radius-card: 15px;
   --radius-button: 8px;
 
@@ -122,6 +124,40 @@
   }
 }
 
+@keyframes v-page-out {
+  to {
+    opacity: 0;
+    translate: 0 -1rem;
+  }
+}
+
+@keyframes v-page-in {
+  from {
+    opacity: 0;
+    translate: 0 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-image-pair(root) {
+    isolation: auto;
+  }
+
+  ::view-transition-old(root) {
+    animation: v-page-out 0.25s cubic-bezier(0.55, 0, 1, 0.45) both;
+    mix-blend-mode: normal;
+  }
+
+  ::view-transition-new(root) {
+    animation: v-page-in 0.55s var(--ease-out-expo) both;
+    mix-blend-mode: normal;
+  }
+}
+
 @keyframes v-drift {
   from {
     transform: translateY(var(--drift, 3rem));
@@ -136,8 +172,8 @@
     @supports (animation-timeline: view()) {
       animation: v-rise linear both;
       animation-timeline: view();
-      animation-range-start: entry calc(var(--i, 0) * 24px);
-      animation-range-end: entry calc(var(--i, 0) * 24px + 120px);
+      animation-range-start: entry calc(var(--i, 0) * 40px + 120px);
+      animation-range-end: entry calc(var(--i, 0) * 40px + 420px);
     }
   }
 }
@@ -147,8 +183,8 @@
     @supports (animation-timeline: view()) {
       animation: v-iris linear both;
       animation-timeline: view();
-      animation-range-start: entry calc(var(--i, 0) * 24px);
-      animation-range-end: entry calc(var(--i, 0) * 24px + 120px);
+      animation-range-start: entry calc(var(--i, 0) * 40px + 120px);
+      animation-range-end: entry calc(var(--i, 0) * 40px + 420px);
     }
   }
 }
@@ -158,8 +194,8 @@
     @supports (animation-timeline: view()) {
       animation: v-wipe linear both;
       animation-timeline: view();
-      animation-range-start: entry calc(var(--i, 0) * 24px);
-      animation-range-end: entry calc(var(--i, 0) * 24px + 120px);
+      animation-range-start: entry calc(var(--i, 0) * 40px + 120px);
+      animation-range-end: entry calc(var(--i, 0) * 40px + 420px);
     }
   }
 }
@@ -182,6 +218,32 @@
 
     & > *:nth-child(3n + 3) {
       --i: 2;
+    }
+  }
+}
+
+@utility v-message {
+  display: none;
+  opacity: 0;
+  translate: 0 -0.375rem;
+
+  &[data-shown] {
+    display: flex;
+    opacity: 1;
+    translate: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      opacity 200ms ease-out,
+      translate 200ms ease-out,
+      display 200ms allow-discrete;
+
+    &[data-shown] {
+      @starting-style {
+        opacity: 0;
+        translate: 0 -0.375rem;
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+import { RouteTransitions } from "@/components/effects";
 import { SiteFooter, SiteHeader } from "@/components/layout";
 import { siteName, siteUrl } from "@/data";
 import { pageMetadata } from "@/lib/metadata";
@@ -58,6 +59,7 @@ export default function RootLayout({
       className={`${jost.variable} ${jostItalic.variable} ${leagueSpartan.variable} antialiased`}
     >
       <body className="group/page flex min-h-dvh flex-col">
+        <RouteTransitions />
         <SiteHeader />
         <main className="grow">{children}</main>
         <SiteFooter />

@@ -54,8 +54,14 @@ export default function ContactForm({ className }: ContactFormProps) {
   const [values, setValues] = useState(blank);
   const [submitCount, setSubmitCount] = useState(0);
   const [sentCount, setSentCount] = useState(0);
+  const [sentShown, setSentShown] = useState(false);
 
   const errors = submitCount > 0 ? findErrors(values) : {};
+
+  const handleValueChange = (name: FieldName, value: string) => {
+    setValues((current) => ({ ...current, [name]: value }));
+    setSentShown(false);
+  };
 
   const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -73,6 +79,7 @@ export default function ContactForm({ className }: ContactFormProps) {
     setValues(blank);
     setSubmitCount(0);
     setSentCount((count) => count + 1);
+    setSentShown(true);
   };
 
   return (
@@ -90,9 +97,7 @@ export default function ContactForm({ className }: ContactFormProps) {
             value={values[name]}
             error={errors[name]}
             submitCount={submitCount}
-            onValueChange={(value) =>
-              setValues((current) => ({ ...current, [name]: value }))
-            }
+            onValueChange={(value) => handleValueChange(name, value)}
           />
         ))}
       </div>
@@ -104,7 +109,12 @@ export default function ContactForm({ className }: ContactFormProps) {
       </div>
 
       {sentCount > 0 ? (
-        <p key={sentCount} role="status" className="mt-6">
+        <p
+          key={sentCount}
+          role="status"
+          data-shown={sentShown ? "" : undefined}
+          className="v-message mt-6"
+        >
           Thanks! Your details look good. This static demo doesn’t send
           anything.
         </p>
