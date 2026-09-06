@@ -1,4 +1,5 @@
 import { contactDetails, office, socialLinks } from "@/data";
+import { telText } from "@/lib/utils";
 import Attribution from "./attribution";
 import Logo from "./logo";
 import NavLinks from "./nav-links";
@@ -32,7 +33,7 @@ export default function SiteFooter() {
                   href={contactDetails.phoneHref}
                   className="v-focus-on-dark hover:underline"
                 >
-                  {contactDetails.phone}
+                  {telText(contactDetails.phone)}
                 </a>
               </span>
               <span className="block">

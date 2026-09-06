@@ -37,3 +37,9 @@ export function cn(...inputs: ClassValue[]) {
 export function telHref(phone: string) {
   return `tel:${phone.replace(/[^+\d]/g, "")}`;
 }
+
+const nonBreakingSpace = String.fromCharCode(0xa0);
+
+export function telText(phone: string) {
+  return phone.replaceAll(" ", nonBreakingSpace);
+}

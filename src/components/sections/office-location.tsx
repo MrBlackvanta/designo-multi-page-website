@@ -2,7 +2,7 @@ import pattern from "@/assets/patterns/three-circles.svg";
 import { OfficeMap } from "@/components/ui";
 import { mapTiles } from "@/data";
 import type { Office, OfficeSlug } from "@/data";
-import { cn, telHref } from "@/lib/utils";
+import { cn, telHref, telText } from "@/lib/utils";
 import { preconnect } from "react-dom";
 
 const bands: Record<OfficeSlug, string> = {
@@ -65,7 +65,7 @@ export default function OfficeLocation({ office }: OfficeLocationProps) {
               <span className="block font-normal">
                 P :{" "}
                 <a href={telHref(phone)} className="v-focus hover:underline">
-                  {phone}
+                  {telText(phone)}
                 </a>
               </span>
               <span className="block font-normal">
