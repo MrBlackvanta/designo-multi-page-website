@@ -278,6 +278,7 @@
   .leaflet-container {
     background-color: var(--color-peach-pale);
     font-family: inherit;
+    isolation: isolate;
   }
 
   .leaflet-container:focus-visible {
