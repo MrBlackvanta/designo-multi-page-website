@@ -29,14 +29,14 @@ export default function OfficeLocation({ office }: OfficeLocationProps) {
           <OfficeMap view={map} className="size-full" />
         </div>
 
-        <div className="bg-peach-pale md:rounded-card relative isolate overflow-clip px-6 py-20 text-center md:px-18.75 md:py-22 md:text-left lg:flex-1 lg:px-23.75">
+        <div className="bg-peach-pale md:rounded-card v-rise relative isolate overflow-clip px-6 py-20 text-center md:px-18.75 md:py-22 md:text-left lg:flex-1 lg:px-23.75">
           <img
             src={pattern.src}
             alt=""
             width={pattern.width}
             height={pattern.height}
             loading="lazy"
-            className="pointer-events-none absolute top-0 left-0 -z-10 size-146 max-w-none md:top-auto md:bottom-0"
+            className="v-drift pointer-events-none absolute top-0 left-0 -z-10 size-146 max-w-none md:top-auto md:bottom-0"
           />
 
           <h2

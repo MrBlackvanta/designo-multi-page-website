@@ -11,7 +11,7 @@ export default function ServiceCards() {
         Our services
       </h2>
 
-      <ul className="grid gap-6 lg:grid-cols-2 lg:gap-x-7.5">
+      <ul className="v-stagger grid gap-6 lg:grid-cols-2 lg:gap-x-7.5">
         <ServiceCard
           service={webDesign}
           desktopImage={webDesignFeature}

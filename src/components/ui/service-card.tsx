@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "@/components/icons";
 import type { Service } from "@/data";
+import { cn } from "@/lib/utils";
 import type { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -17,7 +18,7 @@ export default function ServiceCard({
   const { slug, name, images } = service;
 
   return (
-    <li className={className}>
+    <li className={cn("v-wipe", className)}>
       <Link
         href={`/${slug}`}
         className="rounded-card group/card relative isolate flex h-full min-h-62.5 flex-col items-center justify-center gap-3 overflow-clip text-center text-white focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white md:min-h-50 md:gap-6 lg:min-h-77"

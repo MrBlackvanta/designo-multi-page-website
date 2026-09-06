@@ -42,7 +42,7 @@ export default function AboutStory({ story }: AboutStoryProps) {
       >
         <picture
           className={cn(
-            "pointer-events-none absolute top-80 left-0 -z-10 size-146 md:top-27 md:left-23.5",
+            "v-drift pointer-events-none absolute top-80 left-0 -z-10 size-146 md:top-27 md:left-23.5",
             patternClass,
           )}
         >
@@ -70,7 +70,7 @@ export default function AboutStory({ story }: AboutStoryProps) {
           />
         </picture>
 
-        <div className="min-h-136.25 px-6 py-20 md:min-h-104 md:px-14.5 md:py-17 lg:flex-1 lg:px-23.75 lg:py-38.5">
+        <div className="v-rise min-h-136.25 px-6 py-20 md:min-h-104 md:px-14.5 md:py-17 lg:flex-1 lg:px-23.75 lg:py-38.5">
           <h2
             id={headingId}
             className="text-hero-sm md:text-heading text-peach-ink font-medium"

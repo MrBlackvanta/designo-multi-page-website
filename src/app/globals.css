@@ -98,6 +98,94 @@
   }
 }
 
+@keyframes v-rise {
+  from {
+    transform: translateY(1.5rem);
+  }
+}
+
+@keyframes v-iris {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(75%);
+  }
+}
+
+@keyframes v-wipe {
+  from {
+    clip-path: inset(0 0 100% 0 round var(--radius-card));
+  }
+  to {
+    clip-path: inset(0 0 0 0 round var(--radius-card));
+  }
+}
+
+@keyframes v-drift {
+  from {
+    transform: translateY(var(--drift, 3rem));
+  }
+  to {
+    transform: translateY(calc(var(--drift, 3rem) * -1));
+  }
+}
+
+@utility v-rise {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: v-rise linear both;
+      animation-timeline: view();
+      animation-range-start: entry calc(var(--i, 0) * 24px);
+      animation-range-end: entry calc(var(--i, 0) * 24px + 120px);
+    }
+  }
+}
+
+@utility v-iris {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: v-iris linear both;
+      animation-timeline: view();
+      animation-range-start: entry calc(var(--i, 0) * 24px);
+      animation-range-end: entry calc(var(--i, 0) * 24px + 120px);
+    }
+  }
+}
+
+@utility v-wipe {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: v-wipe linear both;
+      animation-timeline: view();
+      animation-range-start: entry calc(var(--i, 0) * 24px);
+      animation-range-end: entry calc(var(--i, 0) * 24px + 120px);
+    }
+  }
+}
+
+@utility v-drift {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: v-drift linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+  }
+}
+
+@utility v-stagger {
+  @media (width >= 64rem) {
+    & > *:nth-child(3n + 2) {
+      --i: 1;
+    }
+
+    & > *:nth-child(3n + 3) {
+      --i: 2;
+    }
+  }
+}
+
 @utility v-container {
   padding-inline: max(--spacing(6), (100% - var(--container-content)) / 2);
 

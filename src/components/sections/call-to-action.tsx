@@ -15,7 +15,7 @@ export default function CallToAction() {
           width={wash.width}
           height={wash.height}
           loading="lazy"
-          className="pointer-events-none absolute inset-y-0 -left-60 -z-10 my-auto h-146 w-219 max-w-none md:-left-5 lg:left-58.75"
+          className="v-drift pointer-events-none absolute inset-y-0 -left-60 -z-10 my-auto h-146 w-219 max-w-none md:-left-5 lg:left-58.75"
         />
 
         <div>

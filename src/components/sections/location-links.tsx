@@ -13,16 +13,19 @@ export default function LocationLinks() {
 
       <div className="bg-light-grey/50 pointer-events-none absolute top-22.5 right-0 -z-10 hidden h-148.5 w-251.5 rounded-full rounded-bl-none lg:block" />
 
-      <ul className="grid justify-items-center gap-y-12 md:gap-y-17.25 lg:grid-cols-3 lg:gap-x-7.5">
+      <ul className="v-stagger grid justify-items-center gap-y-12 md:gap-y-20 lg:grid-cols-3 lg:gap-x-7.5 lg:gap-y-0">
         {offices.map(({ slug, country, illustration }) => (
-          <li key={slug} className="flex flex-col items-center">
+          <li
+            key={slug}
+            className="flex flex-col items-center md:last:-mt-5.5 lg:last:mt-0"
+          >
             <img
               src={illustration.src}
               alt=""
               width={illustration.width}
               height={illustration.height}
               loading="lazy"
-              className="size-50.5"
+              className="v-iris size-50.5"
             />
 
             <h3 className="text-label mt-12 ps-(--text-label--letter-spacing) font-medium uppercase">
