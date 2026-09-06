@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/ui";
 export default function ContactHero() {
   return (
     <section className="md:v-container">
-      <div className="bg-peach md:rounded-card relative isolate overflow-clip px-6 py-18 text-center text-black md:px-14.5 md:py-17.75 md:text-left lg:flex lg:px-23.75 lg:py-13.75">
+      <div className="bg-peach-band md:rounded-card relative isolate overflow-clip px-6 py-18 text-center text-white md:px-14.5 md:py-17.75 md:text-left lg:flex lg:px-23.75 lg:py-13.75">
         <picture className="pointer-events-none absolute top-0 -left-23 -z-10 h-247.5 w-219 md:-top-20.75 md:-left-30.5 md:size-160 lg:-top-40 lg:left-0">
           <source media="(min-width: 48rem)" srcSet={wash.src} />
           <img

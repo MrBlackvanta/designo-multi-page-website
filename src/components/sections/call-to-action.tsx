@@ -8,7 +8,7 @@ export default function CallToAction() {
       aria-labelledby="cta-heading"
       className="v-container relative z-10 -mb-47.25 md:-mb-21.5 lg:-mb-18"
     >
-      <div className="bg-peach rounded-card relative isolate overflow-clip px-6 py-16 text-center text-black md:px-14.5 md:py-14.25 lg:flex lg:items-center lg:justify-between lg:px-23.75 lg:py-18 lg:text-left">
+      <div className="bg-peach-band rounded-card relative isolate overflow-clip px-6 py-16 text-center text-white md:px-14.5 md:py-14.25 lg:flex lg:items-center lg:justify-between lg:px-23.75 lg:py-18 lg:text-left">
         <img
           src={wash.src}
           alt=""

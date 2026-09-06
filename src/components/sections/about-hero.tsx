@@ -9,7 +9,7 @@ export default function AboutHero() {
     <section className="md:v-container relative">
       <div className="bg-light-grey/50 pointer-events-none absolute top-80 left-0 -z-10 hidden h-148.5 w-251.5 rounded-full rounded-bl-none lg:block" />
 
-      <div className="bg-peach md:rounded-card relative isolate overflow-clip text-center text-black lg:flex lg:flex-row-reverse lg:text-left">
+      <div className="bg-peach-band md:rounded-card relative isolate overflow-clip text-center text-white lg:flex lg:flex-row-reverse lg:text-left">
         <picture className="pointer-events-none absolute top-45 right-0 -z-10 h-236.5 w-219 md:-top-27.25 md:right-auto md:-left-30.5 md:size-160 lg:top-auto lg:bottom-0 lg:left-0">
           <source media="(min-width: 48rem)" srcSet={wash.src} />
           <img

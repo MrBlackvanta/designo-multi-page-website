@@ -27,7 +27,7 @@ export default function ServiceIntro({ service }: ServiceIntroProps) {
     <section className="md:v-container relative">
       <div className="bg-light-grey/50 pointer-events-none absolute top-31.5 left-0 -z-10 hidden h-148.5 w-251.5 rounded-full rounded-bl-none lg:block" />
 
-      <div className="bg-peach md:rounded-card relative isolate flex min-h-80 flex-col justify-center overflow-clip px-6 text-center text-black md:min-h-63">
+      <div className="bg-peach-band md:rounded-card relative isolate flex min-h-80 flex-col justify-center overflow-clip px-6 text-center text-white md:min-h-63">
         <picture
           className={cn(
             "v-drift pointer-events-none absolute top-0 right-0 -z-10 h-146 w-219 md:inset-y-0 md:right-auto md:-left-5.25 md:my-auto",

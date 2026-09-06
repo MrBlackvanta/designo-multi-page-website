@@ -5,8 +5,8 @@ import type { ReactNode } from "react";
 type ButtonGround = "light" | "dark";
 
 const grounds: Record<ButtonGround, string> = {
-  light: "bg-peach",
-  dark: "bg-white",
+  light: "bg-peach v-focus",
+  dark: "bg-white v-focus-on-dark",
 };
 
 type SharedProps = {
@@ -26,7 +26,7 @@ export default function Button({
   children,
 }: ButtonProps) {
   const shape = cn(
-    "v-focus text-button text-dark-grey rounded-button hover:bg-peach-light flex h-14 w-38 items-center justify-center font-medium uppercase motion-safe:transition-colors",
+    "text-button text-dark-grey rounded-button hover:bg-peach-light flex h-14 w-38 items-center justify-center font-medium uppercase motion-safe:transition-colors",
     grounds[ground],
     className,
   );
